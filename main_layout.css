@@ -247,6 +247,10 @@
     #resumeSection h4 {
         padding: 2%;
     }
+
+    #arcadeSection {
+    text-align: center;
+    }
 }
 
 /* =======================================================*/
@@ -454,6 +458,18 @@
         background: none;
         border: none;
         padding: 0;
+    }
+
+    #arcadeSection {
+        text-align: center;
+    }
+
+    #arcadeSection article {
+        padding-bottom: 3.5%;
+    }
+
+    #arcadeSection p {
+        margin: 4% 3%;
     }
 }
    
