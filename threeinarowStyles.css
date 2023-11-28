@@ -1,0 +1,134 @@
+body {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 2%;
+}
+
+#themesTitle {
+    margin: 1%;
+    border-bottom: solid black 1px;
+}
+
+#checkPuzzleMsg {
+    margin-top: 0;
+}
+
+.themes{
+    margin-bottom: 5%;
+}
+
+.visibilityOff {
+    opacity: 0;
+}
+
+.visibilityOn {
+    opacity: 1;
+}
+
+button {
+    margin: 2% 1%;
+    grid-row: 2;
+}
+
+table {
+    margin: 0 auto;
+}
+
+li {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul {
+    padding-left: 0;
+}
+
+/* Default Theme */
+td[currentState='0'][class='default']{
+    background-color: rgb(179, 178, 178);
+}
+td[currentState='1'][class='default']{
+    background-color: rgb(178, 93, 178);
+}
+td[currentState='2'][class='default']{
+    background-color: rgb(0, 255, 170, 0.6);
+}
+
+/* Pink Theme */
+td[currentState='0'][class='theme1']{
+    background-color: rgb(224, 190, 255);
+}
+td[currentState='1'][class='theme1']{
+    background-color: rgb(110, 8, 95);
+}
+td[currentState='2'][class='theme1']{
+    background-color: rgb(255, 0, 255);
+}
+
+/* Blue Theme */
+td[currentState='0'][class='theme2']{
+    background-color: rgb(135, 248, 248)
+}
+td[currentState='1'][class='theme2']{
+    background-color: rgb(53, 12, 218)
+}
+td[currentState='2'][class='theme2']{
+    background-color: rgb(93, 111, 183);
+}
+
+/* Grey Theme */
+td[currentState='0'][class='theme3']{
+    background-color: rgb(148, 148, 148);
+}
+td[currentState='1'][class='theme3']{
+    background-color: rgb(58, 58, 58);
+}
+td[currentState='2'][class='theme3']{
+    background-color: rgba(205, 205, 205, 0.6);
+}
+
+
+/* Green Theme */
+td[currentState='0'][class='theme4']{
+    background-color: rgb(132, 177, 132);
+}
+td[currentState='1'][class='theme4']{
+    background-color: rgb(15, 78, 11);
+}
+td[currentState='2'][class='theme4']{
+    background-color: rgb(17, 223, 34);
+}
+
+
+
+	/*Mobile device styles*/
+	@media only screen and (max-width: 480px){
+        td {
+            outline: solid black;
+            width: 28px;
+            height: 28px;
+        }
+
+        table{
+            margin: 0 auto;
+        }
+
+        button {
+            margin: 4% 1% 1% 1%;
+            grid-row: 2;
+        }
+	}
+	
+	/* Tablet and desktop styles*/
+	@media only screen and (min-width: 481px){
+        td {
+            outline: solid black;
+            width: 40px;
+            height: 40px;
+        }
+	}
