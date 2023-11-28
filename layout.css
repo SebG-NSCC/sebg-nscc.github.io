@@ -1,0 +1,377 @@
+/*Author: Seb Grossett
+Date: Sept 26, 2023
+
+This is a website for Acme Restaurant who specialize in Sushi.*/
+
+/*Mobile device styles*/
+@media only screen and (max-width: 480px){
+   /* Body styles */
+    body article {
+    margin-bottom: 8px;
+   }
+   
+   /* Menu styles */
+    #mobileMenuPDF {
+        border-style: solid;
+        margin-right: 30%;
+        margin-left: 30%;
+        border-color: rgb(221, 78, 39);;
+        border-radius: 20px;
+        background: rgb(243, 214, 176);
+        font-size: large;
+    }
+
+    #mobileMenuPDF a {
+        text-decoration: none;
+    }
+   
+    body #section_menu #menuc1 {
+    display:grid;
+    grid-template-columns: 50%;
+    text-align: center;
+   }
+   
+   #section_menu #menuc1 h4, #section_menu #menuc2 h4  {
+    text-decoration: underline;
+    font-size: 1.1em;
+   } 
+
+    #section_menu #menuc1 :nth-child(1) {
+    grid-column: 1 / span 1;
+    grid-row: 1;
+    margin: 0;
+   }
+
+   #section_menu #menuc1 :nth-child(2) {
+    grid-column: 1 / span 1;
+    grid-row: 2;
+   }
+
+   #section_menu #menuc1 :nth-child(3) {
+    grid-column: 2 / span 1;
+    grid-row: 1;
+    margin: 0;
+   }
+
+   #section_menu #menuc1 :nth-child(4) {
+    grid-column: 2 / span 1;
+    grid-row: 2;
+   }
+
+   #section_menu #menuc1 :nth-child(5) {
+    grid-column: 1 / span 1;
+    grid-row: 3;
+    margin: 0;
+   }
+
+   #section_menu #menuc1 :nth-child(6) {
+    grid-column: 1 / span 1;
+    grid-row: 4;
+   }
+
+   #section_menu #menuc2 :nth-child(1) {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+    margin: 0;
+   }
+
+   /* Contact styles */
+   body section #contact_header, #contact_body, #contact_social, #contact_body ul, #contact_header h3 {
+    text-align: center;
+    padding: 0;
+    margin-top: 16px;
+   }
+
+   body section #contact_social {
+    display: grid;
+   }
+
+   body section #contact_social img {
+    width: 75px;
+   }
+
+   body section #contact_social :nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+   }
+
+   body section #contact_social :nth-child(3) {
+    grid-column: 2;
+    grid-row: 1;
+   }
+
+   body section #contact_social :nth-child(5) {
+    grid-column: 3;
+    grid-row: 1;
+   }
+}
+    
+/* Tablet and desktop styles*/
+@media only screen and (min-width: 481px){
+    /* Structural layouts */
+    body {
+        padding: 0.5%
+    }
+    
+    /* Persistent Nav Links Layout */
+    nav #permLinks {
+        display:grid;
+        padding-inline-start: 0;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 2% 1% 2% 1%;
+    }
+
+    nav #permLinks li {
+        font-size: 1.45em;
+        display: grid;
+        text-align: center;
+    }
+
+    nav #permLinks :nth-child(1) {
+        grid-column: 1 / span 1;
+    }
+
+    nav #permLinks :nth-child(2) {
+        grid-column: 2 / span 1;
+    }
+
+    nav #permLinks :nth-child(3) {
+        grid-column: 3 / span 1;
+    }
+
+    nav #permLinks :nth-child(4) {
+        grid-column: 4 / span 1;
+    }
+
+    /* Section Layout */
+    section {
+        display: grid;
+        column-gap: 2%;
+        row-gap: 40px;
+        padding-top: 1%;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    /* Homepage Layout */
+    #section_homepage article img {
+        width: 350px;
+        padding: 16px;
+    }
+
+    #section_homepage h3 {
+        text-align: center;
+        margin: 16px;
+        outline-style: groove;
+    }
+
+    #section_homepage p {
+        padding-top: 8px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    #values {
+        grid-row: 1;
+        grid-column: 1 / span 2;
+    }
+
+    #values img {
+        float:left;
+    }
+
+    #origin {
+        grid-row: 2;
+        grid-column: 1 / span 2;
+    }
+
+    #origin img {
+        float: right;
+    }
+
+    #reservations {
+        grid-row: 3;
+        grid-column: 1 / span 2;
+        text-align: center;
+    }
+
+    #ordering {
+        grid-row: 4;
+        grid-column: 1 / span 2;
+        text-align: center;
+    }
+
+    #section_homepage #sushi3 {
+        width: 500px;
+        display: block;
+        margin: auto;
+
+    }
+
+    #ordering p {
+        font-size: 1.5em;
+        padding-bottom: 16px;
+    }
+
+    /* About Page Layout */
+    #aboutsushi1 {
+        width: 700px;
+        grid-column: 2;
+    }
+
+    #history {
+        grid-column: 1 / span 1;
+    }
+
+    #history h3 {
+        outline-style: groove;
+        margin: 16px;
+    }
+
+    #history p {
+        padding-top: 8px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    /* Menu Page Layout */
+    #mobileMenuPDF {
+        display: none;
+    }
+
+    #section_menu {
+        display: grid;
+        column-gap: 0;
+        row-gap: 0; 
+        margin-right: 5%; 
+        margin-left: 5%;
+        font-size: 1.15em;
+        outline-style: inset;
+        padding-top: 0;
+        margin-top: 1%;
+        list-style-type: none;
+    }
+
+    #section_menu #menuc1 h4, #section_menu #menuc2 h4, #section_menu #menup1 h4,#section_menu #menup2 h4  {
+        text-decoration: underline;
+       } 
+
+    #section_menu .items {
+        text-align: left;
+        margin-right: 8%; 
+        margin-left: 8%;
+    }
+
+    #section_menu .pieces {
+        text-align: right;
+        margin-right: 8%; 
+        margin-left: 8%;
+    }
+
+    body section #menuc1, #menup1, #menuc2, #menup2 {
+        outline-style: none;
+    }
+
+    #menup1 li, #menup2 li {
+        list-style-type: none;
+        text-align: right;
+        margin-right: 8%; 
+        margin-left: 8%;
+    }
+
+    #menuc1 ul, #menuc2 ul {
+        list-style-type: none;
+        text-align: left;
+        margin-right: 8%; 
+        margin-left: 8%;
+        padding: 0;
+    }
+
+    #menu_title {
+        grid-column: 1 / span 4;
+        grid-row: 1;
+        text-align: center;
+        padding-bottom: 0;
+        z-index: 1;
+    }
+
+    #menu_title h3 {
+        outline-style: solid;
+        z-index: 5;
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+
+    section #menuc1 p {
+        grid-column: 1 / span 1;
+        grid-row: 2;
+        padding-top: 0;
+    }
+
+    section #menuc2 p {
+        grid-column: 3 /  span 1;
+        grid-row: 2;
+    }
+
+    section #menup1 p {
+        grid-row: 2;
+        grid-column: 2 / span 1;
+    }
+
+    section #menup2 p {
+        grid-row: 2;
+        grid-column: 4 / span 1;
+    }
+
+    /* Contact Layout */
+    #contact_social, #link_msg {
+        display:grid;
+        grid-template-columns: auto;
+        text-align: center;
+        font-size: 1.1em;
+        list-style-type: none;
+    }
+
+    #contact_header a {
+        font-size: 1.1em;
+        text-decoration: none;
+        padding: 8px;
+        color: rgb(0, 0, 0);
+        outline-style: solid;
+        background-color: lightgrey;
+    }
+
+    #contact_social img {
+        width: 50%;
+        max-width: 200px;
+    }
+
+    #fb_txt {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    #x_txt {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    #insta_txt {
+        grid-column: 3;
+        grid-row: 3;
+    }
+    #fb_img {
+        grid-column: 1 / span 1;
+        grid-row: 1;
+    }
+
+    #x_img {
+        grid-column: 2 / span 1;
+        grid-row: 1;
+    }
+
+    #insta_img {
+        grid-column: 3 / span 1;
+        grid-row: 1;
+    }
+}
