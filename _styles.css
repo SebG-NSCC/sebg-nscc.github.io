@@ -1,0 +1,155 @@
+/* Author: Seb Grossett
+   Date: October 2023
+   This is an e-portfolio for Seb Grossett*/
+
+/* =======================================================*/
+/* ==================== Base styles ===================== */
+/* =======================================================*/
+html {
+    background: linear-gradient(to right, rgba(21, 70, 123, 0.666), rgba(26, 103, 128, 0.35), rgba(21, 70, 123, 0.666))
+}
+
+body {
+    padding: 0 5% 0 5%;
+    background: linear-gradient(rgba(13, 49, 49, 0.65) 10%, rgba(6, 66, 54, 0.754));
+    font-family: 'Inconsolata', monospace;
+}
+
+h2 {
+    text-align: center;
+}
+
+#goalsTable td, #goalsTable th {
+    border: 1px solid black;
+}
+
+.hideForValidation {
+    display:none;
+}
+
+h3 {
+    border-bottom: solid black;
+}
+
+/* =======================================================*/
+/* ================ Mobile device styles =================*/
+/* =======================================================*/
+
+@media only screen and (max-width: 480px){
+
+    /* +++++++++++++ Nav bar styles +++++++++++++ */
+    a#navicon {
+        outline: solid rgb(221, 78, 39);
+        color: rgb(0, 0, 0);
+        background: linear-gradient(to right, rgba(21, 70, 123, 0.8), rgba(26, 103, 128, 0.8), rgba(21, 70, 123, 0.8));
+        box-shadow: 0px 6px rgba(28, 29, 28, 0.8);
+    }
+
+    a#navicon:hover+#permNavLinks, nav #permNavLinks:hover{
+        background: linear-gradient(to right, rgba(21, 70, 123, 0.95), rgba(26, 103, 128, 0.95), rgba(21, 70, 123, 0.95));
+        outline: solid rgb(221, 78, 39);
+    }
+
+    nav #permNavLinks li a {
+        text-decoration: none;
+        color: rgb(211, 183, 83);
+        font-size: 1.4em;
+    }
+    
+    #backToTopLink img {
+        background-color: rgba(115, 141, 136, 0.8);
+    }
+
+    /* +++++++++++++ Body Styles +++++++++++++ */
+    .mobileNavButtons {
+        background: radial-gradient(rgb(211, 183, 83), rgba(253, 242, 191) 95%);
+        box-shadow: 7px 7px rgba(28, 29, 28, 0.8);
+        outline: rgb(79, 57, 32) solid;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+        
+    body section {
+        padding-bottom: 420px;
+    }
+
+    body section article {
+        background: radial-gradient(rgb(211, 183, 83), rgba(253, 242, 191) 95%);
+        align-content: center;
+        justify-content: center;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-radius: 10px;
+        box-shadow: 7px 7px rgba(28, 29, 28, 0.8);
+        outline: rgb(79, 57, 32) solid;
+    }
+
+    body section article p, body section article h3, body section article h4 {
+        margin: 0 2% 1% 2%;
+    }
+
+    
+
+}
+
+/* =======================================================*/
+/* =============== Tablet & Desktop styles ===============*/
+/* =======================================================*/
+
+@media only screen and (min-width: 481px){
+   /* +++++++++++++ Body Styles +++++++++++++ */
+    body {
+    font-size: 1.9em;
+    }
+
+    article {
+        border-radius: 10px;
+        padding: 0;
+        background: radial-gradient(rgb(211, 183, 83), rgba(253, 242, 191) 95%);
+        outline: rgb(79, 57, 32) solid;
+        box-shadow: 6px 6px rgba(28, 29, 28, 0.8);
+    }
+
+    article p {
+        background: radial-gradient(rgb(211, 183, 83), rgba(253, 242, 191) 95%);
+        border-radius: 20px;
+        padding: 2%;
+        border-bottom: rgba(0, 0, 0, 0.538) inset;
+        border-top: 2px rgba(162, 162, 162, 0.372) outset;
+        border-right: 2px rgba(162, 162, 162, 0.124) outset;
+        border-left: 2px rgba(162, 162, 162, 0.124) outset;
+    }
+
+    /* +++++++++++++ Resume Styles +++++++++++++ */
+
+  
+
+   /* +++++++++++++ Nav bar styles +++++++++++++ */
+   nav, nav ul a {
+    display: block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+   }
+   
+   #permNav ul:first-of-type {
+    outline: 1px solid rgb(79, 57, 32);
+    background:linear-gradient(rgb(7, 98, 114), rgba(23, 137, 114, 0.75), rgb(7, 98, 114));
+    box-shadow: 0px 2px rgba(28, 29, 28, 0.8);
+   }
+
+   #permNav ul:first-of-type li:hover {
+    background-color: rgba(80, 181, 161, 0.9);
+    transition-duration: 0.8s;
+   }
+
+   #permNav ul:first-of-type li {
+    padding: 0 6%;
+   }
+
+   #permNav ul:first-of-type li a {
+    padding: 0 100%;
+   }
+   
+}
+   

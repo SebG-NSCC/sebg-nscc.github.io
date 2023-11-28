@@ -1,0 +1,459 @@
+/* Author: Seb Grossett
+   Date: October 2023
+   This is an e-portfolio for Seb Grossett*/
+
+/* =======================================================*/
+/* ==================== Base Layouts ==================== */
+/* =======================================================*/
+
+/* ++++++++++ Nav bar layout ++++++++++ */
+#permNavLinks, #permBackToTop {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+/* ++++++++++ Body layout +++++++++++++ */
+#goalsTable {
+    border-collapse:collapse;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+#goalsTable #firstTableCell {
+    border: none;
+}
+
+/* ++++++++++ Resume layout +++++++++++++ */
+#resumeSection article ol {
+    display: none;
+}
+
+#resumeSection article h5 { 
+        display: flex;
+        width: 75%;
+        padding: 1.2%;
+        margin: 0% 0 2% 0;
+        border: solid rgb(79, 57, 32);
+        border-radius: 10px;
+    }
+
+    #resumeSection article ol {
+        padding-left: 2%;
+    }
+
+    #resumeSection article ol {
+        padding: 0% 1% 1% 3%;
+        /* background-color: rgba(211, 183, 83, 0.472); */
+        width: 90%;
+    }
+
+    #resumeSection article ol li {
+        border-bottom: none;
+        width: 79%;
+        margin: 0% 0 1% 4%;
+    }
+
+    #resumeSection article ol li:first-of-type {
+        list-style:none;
+        text-align: left;
+        margin-left: 1%;
+        font-weight: bold;
+    }
+
+/* ++++++++++ Contact layout +++++++++++++ */
+#contactSection img {
+    width: 20%;
+}
+
+/* =======================================================*/
+/* ================ Mobile device layouts ================*/
+/* =======================================================*/
+@media only screen and (max-width: 480px){
+
+    /* ++++++++++ Nav bar layout ++++++++++ */
+    #permNav ul {
+        display:none;
+    }
+        
+    a#navicon {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        display: block;
+        text-align: right;
+    }
+
+    a#navicon:hover+#permNavLinks, nav #permNavLinks:hover{
+        padding-bottom: 0;
+        display: grid;
+        text-align: center;
+        padding-left: 0px;
+        font-size: larger;
+        position: fixed;
+        top: 46px;
+        right: 0;
+        left: 0;
+        margin: 0;
+    }
+
+    #permNav ul:last-of-type {
+        display: flex;
+        justify-content: center;
+        align-content: flex-end;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right:0;
+        flex-wrap: nowrap;
+        flex: auto;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    #backToTopLink img{
+        display: flex;
+        justify-content: flex-start;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin: 2%;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    #permNav ul:last-of-type img {
+        width: 13%;
+        padding: 0 2% 0 2%;
+        border-radius: 70px;
+    }
+    
+    /* ++++++++++ Body layout +++++++++++++ */
+    #skillsSection article, #goalsSection article,#resumeSection article, #contactSection article {
+        padding: 2% 2% 2% 1%;
+    }
+
+    .mobileNavButtons {
+        display: flex;
+        flex-wrap: nowrap;
+        flex: 50%;
+        justify-content: center;
+        padding: 1.5% 0 1.5% 0;
+        border-radius: 25px;
+    }
+
+    .mobileNavContainer {
+        display:flex;
+        gap: 15%;
+        font-size: 1.1em;
+    }
+    
+    body {
+        padding-right: 3%;
+        padding-left: 3%;
+    }
+    
+    section {
+        padding-top: 15%;
+        padding-bottom: 0;
+    }
+
+    /* ++++++++++ Home Section layout +++++++++++++ */
+    #homeSection article {
+        display:flex;
+        width: 100%;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    #homeSection article p {
+        padding-bottom: 2%;
+    }
+
+    #homeSection img {
+        margin: 0 2% 2% 2%;
+        max-width: 40%;
+        flex: 50%;
+    }
+
+    h2 {
+        width: 100%;
+        margin: 0;
+        font-size: 1.8em;
+    }
+
+    /* ++++++++++ Contact Section layout +++++++++++++ */
+
+    #contactSection article h4, #contactSection article a, #contactSection article p {
+        text-align: center;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+
+    #contactSection article h4 {
+        text-decoration: underline;
+        padding: 1% 0;
+    }
+
+    #contactSection article p {
+        padding: 2% 0;
+    }
+
+    /* ++++++++++ Skills Section layout +++++++++++++ */
+    #skillsSection ul {
+        list-style: none;
+        padding: 0 2%;
+    }
+
+    #skillsSection ul li {
+        padding-bottom: 2%;
+    }
+
+    #skillsSection ul li:first-of-type {
+        display: none;
+    }
+
+    /* ++++++++++ Goals Section layout +++++++++++++ */
+    #goalsSection img, #skillsSection img {
+        display: none;
+    }
+
+    #goalsSection p {
+        padding: 2% 0;
+    }
+
+    /* ++++++++++ Resume layout +++++++++++++ */
+    #resumeSection article h5:hover+ol, #resumeSection ol:hover{
+        display: flex;
+        justify-content:flex-start;
+        flex-wrap: wrap;
+    }
+
+    #resumeSection article ol > li {
+        padding: 1% 1%;
+        margin-bottom: 2%;
+        list-style: none;
+    } 
+
+    #resumeSection article h5 {
+        margin: 2%;
+        padding: 3%;
+    }
+
+    #resumeSection h4 {
+        padding: 2%;
+    }
+}
+
+/* =======================================================*/
+/* ============= Tablet and desktop layouts ==============*/
+/* =======================================================*/
+@media only screen and (min-width: 481px){
+    /* ++++++++++ Nav bar layout ++++++++++ */
+    body {
+        font-size: clamp(16px, 2vw, 22px);
+    }
+    
+    a#navicon {
+        display: none;
+       }
+    
+    #permNav ul:first-of-type {
+        position: fixed;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+        border-width: 0;
+        width: 100%;
+        height: 3%;
+    }
+    
+    
+    #permNav ul:first-of-type li {
+        display: flex;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+       }
+
+    #homeSection img {
+        margin: 0 2% 2% 2%;
+        max-width: 50%;
+        min-width: 43%;
+        flex: 50%;
+    }
+
+    #permNav ul:last-of-type {
+        display: none;
+    }
+
+    #backToTopLink {
+        display: flex;
+        justify-content: flex-start;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        min-width: 200px;
+        margin: 2%;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    #permNav ul:last-of-type img {
+        width: 10%;
+        padding: 0 1.5% 0 1.5%;
+        border-radius: 180px;
+    }
+
+    nav ul li {
+        margin: 0 5% 0 5%;
+       }
+    /* ++++++++++ Body layout +++++++++++++ */
+    .mobileNavButtons {
+        display:none;
+    }
+    
+    body {
+        padding: 0 2% 0 2%;
+    }
+    
+    section {
+        padding-top: 50px;
+        padding-bottom: 700px;
+    }
+
+    /* ++++++++++ Home Section layout +++++++++++++ */
+    #homeSection {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+
+    #homeSection article {
+        text-align: center;
+        padding-top: 0;
+        width: 100%;
+    }
+
+    #homeSection img {
+        margin: 0 3% 2% 3%;
+        max-width: 30%;
+        min-width: 18%;
+        justify-content: space-around;
+    }
+
+    #homeSection article p{
+        margin: 2% auto;
+        max-width: 80%;
+        min-width: 90%
+    }
+
+    #homeSection article h2 {
+        margin: 1% 0 0 0;
+        font-size: 2em;
+    }
+
+    /* ++++++++++ Skills Section layout +++++++++++++ */
+    #skillsSection h3 {
+        margin: 2%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    #skillsSection article {
+        display: grid;
+    }
+
+    #skillsSection img {
+        width: 40%;
+        margin: 2% 0% 4% 2%;
+        float: right;
+    }
+
+    #skillsSection article h4, #skillsSection article ul {
+        text-align:left;
+        list-style: none;
+        margin: 0;
+        margin-bottom: 2%;
+        padding: 0;
+    }
+
+    #skillsSection article ul li {
+        margin: 0 0 2% 0;
+    }
+
+    #skillsSection ul:first-of-type{
+        grid-column: 1;
+        grid-row: 2;
+        margin: 0 2% 2% 2%;
+        clear: both;
+    }
+
+    /* ++++++++++ Goals Section layout +++++++++++++ */
+    #goalsSection article, #resumeSection article, #contactSection article {
+        padding: 0.5% 2% 0.5% 2%;
+    }
+
+    #goalsSection img {
+        float: left;
+        max-width: 45%;
+        overflow: auto;
+        margin-right: 2%;
+    }
+
+    #goalsSection p {
+        overflow: auto;
+    }
+
+    /* ++++++++++ Resume Section layout +++++++++++++ */
+    #resumeSection article h5:hover+ol{
+        display: flex;
+        justify-content:flex-start;
+        flex-wrap: wrap;
+    }
+
+    #resumeSection article ol > li { 
+        display: flex;
+        width: 80%;
+    }
+
+    #resumeSection article ol {
+        padding-left: 0;
+    }
+
+    /* ++++++++++ Contact Section layout +++++++++++++ */
+
+    #contactSection article h4, #contactSection article a, #contactSection article p {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    #contactSection p {
+        margin: 2% 10%;
+    }
+
+    #contactSection img {
+        width: 10%;
+    }
+
+    #contactSection h4 {
+        text-decoration: underline;
+    }
+
+    #contactSection p {
+        background: none;
+        border: none;
+        padding: 0;
+    }
+}
+   

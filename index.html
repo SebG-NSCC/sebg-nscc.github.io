@@ -1,103 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--Author: Seb Grossett
-        Date: Sept 26, 2023
-        
-        This is a website for Acme Restaurant who specialize in Sushi. -->
+    <!-- Author: Seb Grossett
+         Date: October 2023
+         This is an e-portfolio for Seb Grossett-->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="student, acme, restaurant, coding, sushi">
-    <title>Acme Restaurant</title>
-    <link href="reset.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-    <link href="layout.css" rel="stylesheet">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seb Grossett - Portfolio</title>
+
+    <!-- Stylesheets -->
+    <link href="_reset.css" rel="stylesheet">
+    <link href="_styles.css" rel="stylesheet">
+    <link href="_layout.css" rel="stylesheet">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Limelight&family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
 
 </head>
 <body>
-    <header>
-            <h1>AR Sushi</h1>
-            <h3>Acme Restaurant - Family Owned and Operated Since 1983</h3>
-    </header>
-    
     <!-- Persistent Navigation -->
-    <nav>
+    <nav id="permNav">
         <a id="navicon"><img src="tf_navicon2.png" alt="navicon"></a>
-            <ul id="permLinks">
-                <li><a href="index.html" id="home_link">Home</a></li>
-                <li><a href="menu.html" id="menu_link">Menu</a></li>
-                <li><a href="about.html" id="about_link">About</a></li>
-                <li><a href="contact.html" id="contact_link">Contact</a></li>
+            <ul id="permNavLinks">
+                <li><a href="#homeSection" id="home_link">Home</a></li>
+                <li><a href="#skillsSection" id="skills_link">Skills</a></li>
+                <li><a href="#goalsSection" id="goals_link">Goals</a></li>
+                <li><a href="#resumeSection" id="resume_link">Resume</a></li>
+                <li><a href="#contactSection" id="contact_link">Contact</a></li>
+            </ul>
+            <ul id="permBackToTop">
+                <li><a href="#homeSection" id="backToTopLink"><img src="homeicon.png" alt="home icon"></a> </li>
             </ul>
     </nav>
     
-    <section id="section_homepage">
-       <!-- Online Ordering -->
-       <article id="ordering">
-        <h3>Online Ordering</h3>
-        <img id="sushi3" src="images/sushi3.jpg" alt="An open box of assorted sushi rolls and edamame.">
-        <p>
-            <a id="u_link" href="https://www.ubereats.com/ca" target="new">Uber Eats</a>
-            <a id="d_link" href="https://www.doordash.com/en-CA" target="new">DoorDash</a>
+    <section id="homeSection">
+        <article>
+            <h2>Seb Grossett</h2>
+            <p>Hello, I'm Seb Grossett. I am a StFX alumnus currently studying Full Stack Development at NSCC.<br><br>On this webpage you will find my current skills, goals, resume, and contact information.
+
+            </p>
+            <img id="stfxImg" src="STFX_logo.png" alt="StFX's logo">
+            <img id="nsccImg" src="nscc-it-jpeg.jpg" alt="NSCC's logo for the IT campus">
+        </article>
+        <p class="mobileNavContainer">
+            <a href="#skillsSection" class="mobileNavButtons">Next</a>
         </p>
-    </article>
-
-        <!-- Values -->
-        <article id="values">
-            
-            <!-- Values -->
-            <h3>Our Values</h3>
-            <img src="images/sushi1.jpg" alt="A single piece of sushi served on a stone plate in the foreground, with a white labeled bottle of Sake in the background.">
-            <p>Integer ligula elit, porta quis ipsum in, blandit lobortis erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque vestibulum eget erat eu congue. Vivamus ex erat, mollis eget malesuada vel, mollis vitae enim. Quisque sit amet ex eros. Cras eleifend purus nec pharetra condimentum. Quisque ac libero at erat aliquet blandit. Phasellus et turpis diam. Sed ornare nisl et aliquam tempus. Nullam nec dolor consectetur, blandit est quis, ultrices massa. Donec mollis enim ac euismod faucibus. Vivamus mauris nibh, auctor semper quam quis, congue blandit mauris. Suspendisse a ipsum suscipit, scelerisque felis at, ultrices lectus. Cras finibus nibh metus, non tristique justo luctus at. Sed turpis odio, fermentum at maximus a, iaculis sit amet diam.
-
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum malesuada semper. Duis tellus dolor, ultricies quis porta consectetur, consectetur eget orci. Aenean ultricies suscipit lacus, et tristique turpis consectetur ac. Vivamus dignissim pharetra turpis sed vulputate. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam vitae dolor odio. Etiam elementum dui eu volutpat interdum. Duis lectus dui, sodales et felis a, pharetra fringilla est. Nam purus libero, pulvinar in nibh nec, cursus sodales odio. Nulla risus nisi, laoreet quis dapibus non, luctus eget enim. Nam mauris neque, luctus ac nisi vel, sagittis tempus tortor.
-            <br><br>
-            Sed malesuada ut metus vitae feugiat. Nullam molestie bibendum ligula ac viverra. Cras tellus libero, mattis non auctor vel, convallis at diam. Integer nisl felis, ultrices vel diam sit amet, ultrices iaculis quam. Donec pretium posuere ex, in bibendum felis vestibulum auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque in est erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse aliquam, nisi sed aliquet luctus, lacus metus vulputate dolor, id dignissim velit magna vel erat. 
-            <br><br>
-            Duis congue nunc neque, eu hendrerit eros varius eu. Vestibulum tincidunt, purus vitae sodales iaculis, velit tellus dictum nulla, at euismod justo orci quis tortor. Mauris lobortis massa sed urna pulvinar vulputate.
-            </p>
-        </article>
-        
-        <!-- Origin -->
-        <article id="origin">
-            <h3>The Origin of Sushi</h3>
-            <img src="images/sushi2.jpg" alt="Several pieces of Salmon, Shrimp, Tuna, and Squid sushi on a black plate.">
-            <p>
-                Sed malesuada ut metus vitae feugiat. Nullam molestie bibendum ligula ac viverra. Cras tellus libero, mattis non auctor vel, convallis at diam. Integer nisl felis, ultrices vel diam sit amet, ultrices iaculis quam. Donec pretium posuere ex, in bibendum felis vestibulum auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque in est erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse aliquam, nisi sed aliquet luctus, lacus metus vulputate dolor, id dignissim velit magna vel erat. Duis congue nunc neque, eu hendrerit eros varius eu. Vestibulum tincidunt, purus vitae sodales iaculis, velit tellus dictum nulla, at euismod justo orci quis tortor. Mauris lobortis massa sed urna pulvinar vulputate.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum malesuada semper. Duis tellus dolor, ultricies quis porta consectetur, consectetur eget orci. Aenean ultricies suscipit lacus, et tristique turpis consectetur ac. Vivamus dignissim pharetra turpis sed vulputate. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam vitae dolor odio. Etiam elementum dui eu volutpat interdum. Duis lectus dui, sodales et felis a, pharetra fringilla est. Nam purus libero, pulvinar in nibh nec, cursus sodales odio. Nulla risus nisi, laoreet quis dapibus non, luctus eget enim. Nam mauris neque, luctus ac nisi vel, sagittis tempus tortor.
-                <br><br>
-                Integer ligula elit, porta quis ipsum in, blandit lobortis erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque vestibulum eget erat eu congue. Vivamus ex erat, mollis eget malesuada vel, mollis vitae enim. Quisque sit amet ex eros. Cras eleifend purus nec pharetra condimentum. Quisque ac libero at erat aliquet blandit. Phasellus et turpis diam. Sed ornare nisl et aliquam tempus. Nullam nec dolor consectetur, blandit est quis, ultrices massa. Donec mollis enim ac euismod faucibus. Vivamus mauris nibh, auctor semper quam quis, congue blandit mauris. Suspendisse a ipsum suscipit, scelerisque felis at, ultrices lectus. Cras finibus nibh metus, non tristique justo luctus at. Sed turpis odio, fermentum at maximus a, iaculis sit amet diam.
-                <br><br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum malesuada semper. Duis tellus dolor, ultricies quis porta consectetur, consectetur eget orci. Aenean ultricies suscipit lacus, et tristique turpis consectetur ac. Vivamus dignissim pharetra turpis sed vulputate. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam vitae dolor odio. Etiam elementum dui eu volutpat interdum. Duis lectus dui, sodales et felis a, pharetra fringilla est. Nam purus libero, pulvinar in nibh nec, cursus sodales odio. Nulla risus nisi, laoreet quis dapibus non, luctus eget enim. Nam mauris neque, luctus ac nisi vel, sagittis tempus tortor.
-            </p>
-        </article>
-        
-        <!-- Reservations -->
-        <article id="reservations">
-            <h3>Reservations</h3>
-            <p>
-                Nam vitae efficitur tellus. Duis efficitur mi vel odio tincidunt rhoncus. Phasellus aliquam augue   ipsum, vel dignissim nisi sodales at. Nunc id malesuada odio, vel posuere nunc. Phasellus ornare rhoncus leo, nec maximus nunc pulvinar vel. Donec a risus lacus. Praesent non volutpat dolor. Vestibulum nec tincidunt nunc. Sed vehicula mollis ipsum a elementum.
-
-                Sed malesuada ut metus vitae feugiat. Nullam molestie bibendum ligula ac viverra. Cras tellus libero, mattis non auctor vel, convallis at diam. Integer nisl felis, ultrices vel diam sit amet, ultrices iaculis quam. Donec pretium posuere ex, in bibendum felis vestibulum auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque in est erat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse aliquam, nisi sed aliquet luctus, lacus metus vulputate dolor, id dignissim velit magna vel erat. Duis congue nunc neque, eu hendrerit eros varius eu. Vestibulum tincidunt, purus vitae sodales iaculis, velit tellus dictum nulla, at euismod justo orci quis tortor. Mauris lobortis massa sed urna pulvinar vulputate.
-                Sed malesuada ut metus vitae feugiat. Nullam molestie bibendum ligula ac viverra. Cras tellus libero, mattis non auctor vel, convallis at diam.
-            <p id="art3_last">*****Mauris lobortis massa sed urna pulvinar vulputate*****
-            </p>
-        </article>
-            
     </section>
-    
-    <footer>
-        <p>Copyright &copy; AR Sushi, 2023</p>
-    </footer>
+    <section id="skillsSection">
+        <article>
+            <h3>Skills</h3>
+                <ul id="skillsList">
+                    <li><img src="coding_stock.jpg" alt="a computer monitor showing several lines of code"></li>
+                    <li><u>HTML</u>: Able to layout and edit webpages using HTML 5 standards. Foundational understanding of appropriate syntax and best practices. HTML essential training certificate on LinkedIn.</li>
+                    <li><u>CSS</u>: Solid understanding of CSS selectors and attributes. Able to layout and style webpages using techniques including flexbox and grid-based layouts. CSS essential training certificate on LinkedIn.</li>
+                    <li><u>JavaScript</u>: Foundational understanding of "for" and "while" loops, functions, 2 dimensional arrays, data types, objects, and debugging. Able to create functioning console-based applications including games, and calculators. </li>
+                </ul>
+        </article>
+        <p class="mobileNavContainer">
+            <a href="#homeSection" class="mobileNavButtons">Prev</a>
+            <a href="#goalsSection" class="mobileNavButtons">Next</a>
+        </p>
+    </section>
+    <section id="goalsSection">
+        <article>
+            <h3>Goals</h3>
+            <p>
+                <img id="goalsImage" src="chart_stock.jpg" alt="a drawn figure standing at the top of a stairway, looking at a trend line move up and down">
+                In this section, you will find a list of goals I am working towards completing in the next year. I have assigned a timeline to each goal to keep myself on track as well as a section to track progress. This is not an extensive list of goals or skills that I will be focused on developing over the next year, but it is a good place to start as most of the languages and technologies listed will be outside the scope of the Full Stack course I am currently taking.
+            </p>
+            <table id="goalsTable">
+                <tr>
+                    <td id="firstTableCell"></td>
+                    <th>Timeline</th>
+                    <th>Medium</th>
+                    <th>Progress</th>
+                </tr>
+                <tr>
+                    <th>WordPress</th>
+                    <td>Q3 2024</td>
+                    <td>LinkedIn</td>
+                    <td>Not started</td>
+                </tr>
+                <tr>
+                    <th>SharePoint</th>
+                    <td>Q3 2024</td>
+                    <td>LinkedIn</td>
+                    <td>Not started</td>
+                </tr>
+                <tr>
+                    <th>Python</th>
+                    <td>Q4 2024</td>
+                    <td>E-Learning</td>
+                    <td>Not started</td>
+                </tr>
+                <tr>
+                    <th>C</th>
+                    <td>Q4 2024</td>
+                    <td>E-Learning</td>
+                    <td>Not started</td>
+                </tr>
+                <tr>
+                    <th>SQL</th>
+                    <td>Q2 2024</td>
+                    <td>NSCC</td>
+                    <td>In-progress</td>
+                </tr>
+            </table>
+        </article>
+        <p class="mobileNavContainer">
+            <a href="#skillsSection" class="mobileNavButtons">Prev</a>
+            <a href="#resumeSection" class="mobileNavButtons">Next</a>
+        </p>
+    </section>
+    <section id="resumeSection">
+        <article>
+            <h3>Resume</h3>
+                <h4><u>Employment History</u></h4>
+                    <h5>Popeyes Supplements | 2022-2023</h5>
+                        <ol>
+                            <li><u>Sales Associate</u></li>
+                                <li>Consulted customers to determine health and wellness goals, potential nutritional deficiencies, and dietary preferences to suggest appropriate supplements.</li>
+                                <li>Received shipments from suppliers and performed regular inventory counts to track product movement and shrinkage.</li>
+                                <li>Operated a retail POS system and an online portal in order to fulfill and dispatch orders.</li>
+                                <li>Provided a welcoming and professional environment for all potential customers.</li>
+                        </ol>
+                    
+                    <h5>Manulife | 2022</h5>
+                        <ol>
+                            <li><u>AMCS Case Manager</u></li>
+                                <li>Worked closely with clients and plan members to determine support periods and disability payment eligibility.</li>
+                                <li>Analyzed and assessed group disability contracts, adhered to service level agreements, and handled sensitive medical information.</li>
+                                <li>Designed appropriate return to work strategies for plan members based on their job requirements and current level of function.</li>
+                                <li>Provided tools and disability support services to plan members and regularly followed up throughout their recovery process.</li>
+                        </ol>
+                    
+                    <h5>SportChek Canada | 2019-2020</h5>
+                        <ol>
+                            <li><u>Merchandiser / Sales Associate</u></li>
+                                <li>Handled incoming shipments and merchandised new products onto the sales floor.</li>
+                                <li>Adjusted signage and pricing in accordance with sales and promotional events.</li>
+                                <li>Maintained store standards and provided excellent customer service.</li>
+                                <li>Assisted customers with inquiries and provided personalized recommendations.</li>
+                        </ol>
+                    
+                    <h5>Titans Gymnastics & StFX University | 2013-2019</h5>
+                        <ol>
+                            <li><u>Gymnastics Instructor</u></li>
+                                <li>Provided a positive and safe environment for students by ensuring all apparatus was used and set up/stored properly.</li>
+                                <li>Planned and scheduled curriculum based on a predetermined set of skills and tailored lesson plans to fit each student's needs and goals.</li>
+                                <li>Tracked and monitored students' progress throughout the term and conducted year-end progress reports.</li>
+                        </ol>
 
+                    <h5>Education | 2017-2021 & 2023-2024</h5>
+                        <ol>
+                            <li><u>StFX University 21' & NSCC 24'</u></li>
+                                <li>Graduated with honors from StFX with a major in Kinesiology and a minor in Sport Management.</li>
+                                <li>Started the Full Stack Dvelopment program at NSCC in 2023, with an expected graduation in 2024.</li>
+                        </ol>
+        </article>
+        <p class="mobileNavContainer">
+            <a href="#goalsSection" class="mobileNavButtons">Prev</a>
+            <a href="#contactSection" class="mobileNavButtons">Next</a>
+        </p>
+    </section>
+    <section id="contactSection">
+        <article>
+            <h3>Contact</h3>
+               
+                <h4>Need to get in touch?</h4>
+                <p>Personal email:&nbsp;<a id="emailButton" href="mailto:sebgr97@gmail.com">sebgr97@gmail.com</a></p>
+            
+                <h4>Looking to network?</h4>
+                <a href="https://www.linkedin.com/in/sebastian-grossett-086579138/" target="new"><img src="LIsmall_logo.png" alt="LinkedIn logo"></a>
+                <p>LinkedIn Profile</p>
+                
+                <h4>Social Media Links</h4>
+                <a href="https://www.facebook.com/sebastian.grossett/" target="new"><img src="facebookicon.jpg" alt="Facebook Icon"></a>
+                <p>Facebook</p>
+                <a href="https://www.instagram.com/sebgrossett/" target="new"><img src="instaicon.jpg" alt="Instagram Icon"></a>
+                <p>Instagram</p>         
+                
+                <h4>Emergency Contact</h4>
+                <p>902-802-0082</p>
+              
+        </article>
+        <p class="mobileNavContainer">
+            <a href="#resumeSection" class="mobileNavButtons">Prev</a>
+        </p>
+    </section> 
 </body>
 </html>
