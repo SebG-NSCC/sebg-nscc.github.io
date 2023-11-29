@@ -99,3 +99,15 @@ button {
     margin: 2% 5% 0 5%;
     border-radius: 0%;
 }
+
+	/*Mobile device styles*/
+	@media only screen and (max-width: 480px){
+	
+	}
+	
+	/* Tablet and desktop styles*/
+	@media only screen and (min-width: 481px){
+        #rollButton, #holdButton {
+        padding: 2% 7%;
+        }
+    }
