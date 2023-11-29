@@ -159,5 +159,11 @@ h3 {
     border-radius: 10px;
     background-color: rgba(23, 137, 114, 0.75);
     }
+
+    #arcadeSection #gamesP {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
 }
    
