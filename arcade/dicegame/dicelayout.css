@@ -1,0 +1,113 @@
+html {
+    text-align: center;
+}
+
+#scoreboard article {
+    display: grid;
+}
+
+#scoreboard h2:first-of-type {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#scoreboard #score {
+    grid-column: 1;
+    grid-row: 2;
+} 
+
+#scoreboard #turnScore {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#scoreboard h2:last-of-type {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#scoreboard #currentPlayer {
+    grid-column: 2;
+    grid-row: 1 /span 2;
+}
+
+.imgDisplay {
+    width: 60%;
+    border-radius: 90px;
+    border: solid rgba(0, 0, 0, 0.4);
+}
+
+.disabled {
+    display: none;
+    width: 60%;
+}
+
+#gameButtons article {
+    display: flex;
+    justify-content: center;
+}
+
+#shortGame, #mediumGame, #longGame, #customGame, #soloGame, #twoGame, #fourGame, #customPlayers {
+    padding: 2%;
+    margin: 1%;
+    grid-row: 2;
+}
+
+#gameButtons article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#gameButtonsInfo {
+    width: 100%;
+    margin: 1%;
+    text-decoration: underline;
+    font-size: 1.3em;
+}
+
+#scoreSelection button {
+    padding: 1% 3%;
+}
+
+#rollMessage {
+    position: absolute;
+    margin: 28% 0%;
+    padding: 2% 0;
+    background-color: rgba(148, 222, 222, 0.6);
+    color: blue;
+    border-radius: 0;
+    padding: 0 auto;
+    text-align: center;
+    border: outset grey;
+}
+
+#messageDisplay article {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+#messageDisplay article p:last-child {
+    display:flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#winningMessage {
+    background-color: black;
+    color: white;
+    font-size: 1.3em;
+    position: absolute;
+    z-index: 1;
+}
+
+#restartButton {
+    font-size: 1.3em;
+    position: absolute;
+    bottom: 20%;
+    z-index: 1;
+}

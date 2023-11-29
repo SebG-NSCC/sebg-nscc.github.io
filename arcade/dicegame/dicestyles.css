@@ -1,0 +1,101 @@
+#intro p {
+    font-size: 1.3em;
+    margin: 0 10%;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    padding-left: 0;
+}
+
+#messageDisplay {
+    font-size: 1.3em;
+}
+
+#rollButton {
+    background-color: rgb(115, 223, 130);
+    background: radial-gradient(rgb(4, 235, 35), rgb(92, 92, 153));
+    font-size: 1.7em;
+}
+
+#holdButton {
+    /* background-color: rgb(223, 115, 115); */
+    background: radial-gradient(rgb(233, 24, 24), rgb(92, 92, 153));
+    font-size: 1.7em;
+}
+
+h2 {
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+
+#scoreboard li, #scoreboard p {
+    font-size: 1.5em;
+}
+
+#intro {
+    border: solid black;
+    margin: 1% 2% 0% 2%;
+    padding-bottom: 2%;
+    border-radius: 20px;
+    background: radial-gradient(rgb(46, 103, 104), rgb(140, 201, 210));
+}
+
+html {
+    background: radial-gradient(rgb(140, 204, 210), rgb(43, 84, 127))
+}
+
+#currentPlayer {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    border: solid black;
+    margin-bottom: 4%;
+    margin-top: 3%;
+    padding: 2%;
+}
+
+.hiddenElement {
+    display:none;
+}
+
+.showElement {
+    display: block;
+}
+
+.flashOff {
+    background-color:blank;
+}
+
+.flashOn {
+    background-color: rgba(242, 255, 0, 0.6);
+    position: absolute;
+    margin: 0px;
+    padding: auto;
+    right: 0;
+    left: 0;
+    font-size: 2.2em;
+}
+
+#restartButton {
+    font-size: 1.7em;
+}
+
+.winningArticle {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    background-color: black;
+    width: 100%;
+    z-index: 0;
+}
+
+button {
+    padding: 3% 10%;
+    margin: 2% 5% 0 5%;
+    border-radius: 0%;
+}

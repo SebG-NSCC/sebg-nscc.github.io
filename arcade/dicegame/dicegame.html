@@ -1,13 +1,80 @@
+    
+    <a href="/index.html" id="backToHomeLink"><img src="/images/home/homeicon.png" alt="home icon"></a>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dice Game</title>
+
+    <link href="dicereset.css" rel="stylesheet">
+    <link rel="stylesheet" href="dicestyles.css">
+    <link href="dicelayout.css" rel="stylesheet">
     <link rel="stylesheet" href="dicegame.css">
+    
+    <script src="diceApp.js" defer></script>
+
 </head>
 <body>
-    <h1>Under Construction! Please come back later.</h1>
-    <a href="/index.html" id="backToHomeLink"><img src="/images/home/homeicon.png" alt="home icon"></a>
+    <section id="intro">
+        <h1>Dice Game</h1>
+        <article>
+            <p>Roll the die and try to reach the winning score. A 1 will set your turn score to 0. Hold ends your turn and adds the turn score to your total score.</p>
+        </article>
+    </section>
+    <section id="scoreboard">
+        <article>
+            <h2>Scoreboard</h2>
+            <ul id="score">
+                <li id="player_score"></li>
+            </ul>
+            <h2 class='flashOff' id="currentPlayer">Welcome!</h2>
+            <h2>Turn Score</h2>
+            <p id="turnScore">0</p>
+        </article>
+    <section id="messageDisplay">
+        <article>
+            <p class="disabled" id="rollMessage"></p>
+            <p class="disabled" id="winningMessage"></p>
+            <button class="disabled" id="restartButton">Play Again</button>
+        </article>
+        <article class="disabled" id="winningArticle"></article>
+    </section>
+    </section>
+    <section id="scoreSelection">
+        <article id="scoreList">
+            <!-- <button id="winScore10">10</button> -->
+        </article>
+    </section>
+    <section id="dice">
+        <article>
+            <img id="dice0" class="imgDisplay" src="/../images/dicegame/emptydie.jpg">
+            <img id="dice1" class="disabled" src="/../images/dicegame/dice1.jpg">
+            <img id="dice2" class="disabled" src="/../images/dicegame/dice2.jpg">
+            <img id="dice3" class="disabled" src="/../images/dicegame/dice3.jpg">
+            <img id="dice4" class="disabled" src="/../images/dicegame/dice4.jpg">
+            <img id="dice5" class="disabled" src="/../images/dicegame/dice5.jpg">
+            <img id="dice6" class="disabled" src="/../images/dicegame/dice6.jpg">
+            <p class="disabled" id="floatingMessage"></p>
+        </article>
+    </section>
+    <section class="enabled" id="gameButtons">
+        <article>
+            <p class="enabled" id="gameButtonsInfo"></p>
+            <button class="disabled" id="rollButton">Roll</button>
+            <button class="disabled" id="holdButton">Hold</button>
+            <button class="enabled" id="newGameButton">New Game</button>
+            <button class="disabled" id="shortGame">Short (10 points)</button>
+            <button class="disabled" id="mediumGame">Medium (50 points)</button>
+            <button class="disabled" id="longGame">Long (100 points)</button>
+            <button class="disabled" id="customGame">Custom Points</button>
+            <button class="disabled" id="soloGame">1 Player</button>
+            <button class="disabled" id="twoGame">2 Players</button>
+            <button class="disabled" id="fourGame">4 Players</button>
+            <button class="disabled" id="customPlayers">Custom</button>
+        </article>
+    </section>
 </body>
 </html>
