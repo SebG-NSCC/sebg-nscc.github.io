@@ -49,6 +49,7 @@ html #goalsTable #firstTableCell {
     flex: auto;
     width: 100%;
     margin-bottom: 0;
+    z-index: 1;
   }
   #backToTopLink img {
     display: flex;
