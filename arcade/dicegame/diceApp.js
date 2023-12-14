@@ -8,7 +8,7 @@ let playerArray;
 
 function selectNumberOfPlayers() {    
     do {
-        numberOfPlayers = prompt(`Select the number of players (1-10): `);
+        numberOfPlayers = prompt(`How many players? (1-10): `);
 
         if (numberOfPlayers >= 1 && numberOfPlayers <= 10) {
             playerScoreArray = Array.from({length: numberOfPlayers}, () => 0);
@@ -40,7 +40,7 @@ function choosePlayerName() {
     }
 
     for (let i = 0; i < playerArray.length; i++){
-        document.getElementById(`player_score`).innerText += playerArray[i] + ': ' + playerScoreArray[i] + `\n`;
+        document.getElementById(`player_score`).innerText += ' ' + playerArray[i] + ': ' + playerScoreArray[i];
     }
 
     document.getElementById("holdButton").setAttribute("class", "enabled");
@@ -49,10 +49,11 @@ function choosePlayerName() {
 
 function showMessage(msg, rollNum) { //show roll message in the middle of the screen
     document.getElementById(`rollMessage`).textContent = `${msg}! You rolled a ${rollNum}.`;
-    document.getElementById(`rollMessage`).setAttribute("class", "imgDisplay");
+    // document.getElementById(`rollMessage`).setAttribute("class", "imgDisplay");
+    $('#rollMessage').toggle();
     setTimeout(() => {
-        document.getElementById(`rollMessage`).setAttribute("class", "disabled");
-    }, "800")
+        $('#rollMessage').toggle();
+    }, 800)
 }
 
 function switchPlayer() {
@@ -63,16 +64,18 @@ function switchPlayer() {
         active_player++;
     }
     
-    setInnerContent('currentPlayer', `${playerArray[active_player]}'s Turn`);
+    setInnerContent('currentPlayer', `Current Player: ${playerArray[active_player]}`);
     setInnerContent('player_score', '');
     
     for (let i = 0; i < playerArray.length; i++){
-        document.getElementById(`player_score`).innerText += playerArray[i] + ': ' + playerScoreArray[i] + `\n`;
+        document.getElementById(`player_score`).innerText += ' ' + playerArray[i] + ': ' + playerScoreArray[i];
     }
 
-    document.getElementById('currentPlayer').setAttribute('class', 'flashOn');
+    $('#currentPlayer').css('background-color', 'white');
+    $('#currentPlayer').css('font-size', '2em');
     setTimeout(() => {
-        document.getElementById('currentPlayer').setAttribute('class', 'flashOff');
+        $('#currentPlayer').css('background-color', 'inherit');
+        $('#currentPlayer').css('font-size', '1.5em');
     }, 800)
     turn_score = 0;
 }
@@ -115,7 +118,9 @@ document.getElementById("newGameButton").addEventListener("click", function() {
     setClass('twoGame', 'enabled');
     setClass("fourGame", "enabled");
     setClass('customPlayers', 'enabled');
-    setInnerContent('gameButtonsInfo', 'Select the number of Players (1-10)');
+    setInnerContent('gameButtonsInfo', 'How many players? (1-10)');
+    $('.diceRulesP').toggle();
+    $('.diceTitle').toggle();
 });
 
 //Number of Players Selection
@@ -148,37 +153,34 @@ document.getElementById("newGameButton").addEventListener("click", function() {
         winningScore = shortGameScore;
         hideGameLengthOptions()
         choosePlayerName();
-        setInnerContent('currentPlayer', `${playerArray[active_player]}'s Turn`);
+        setInnerContent('currentPlayer', `Current Player: ${playerArray[active_player]}`);
     });
     document.getElementById("mediumGame").addEventListener("click", function() {
         let mediumGameScore = 50;
         winningScore = mediumGameScore;
         hideGameLengthOptions()
         choosePlayerName();
-        setInnerContent('currentPlayer', `${playerArray[active_player]}'s Turn`);
+        setInnerContent('currentPlayer', `Current Player: ${playerArray[active_player]}`);
     });
     document.getElementById("longGame").addEventListener("click", function() {
         let longGameScore = 100;
         winningScore = longGameScore;
         hideGameLengthOptions()
         choosePlayerName();
-        setInnerContent('currentPlayer', `${playerArray[active_player]}'s Turn`);
+        setInnerContent('currentPlayer', `Current Player: ${playerArray[active_player]}`);
     });
     document.getElementById("customGame").addEventListener("click", function() {
         hideGameLengthOptions()
         selectWinningScore();
         choosePlayerName();
-        setInnerContent('currentPlayer', `${playerArray[active_player]}'s Turn`);
+        setInnerContent('currentPlayer', `Current Player: ${playerArray[active_player]}`);
     });
-
-// choosePlayerName();
-// setInnerContent('currentPlayer', `${playerArray[active_player]}'s Turn`);
 
 document.getElementById("holdButton").addEventListener("click", function() {
     //add turn score to the active player's total score in playerScoreArray.
     playerScoreArray[active_player] = playerScoreArray[active_player] += turn_score;
     switchPlayer();   
-    setInnerContent('turnScore', parseInt(turn_score));
+    setInnerContent('turnScore', 'Turn Score:' + ` ${parseInt(turn_score)}`);
 
 });
 
@@ -200,12 +202,12 @@ document.getElementById("rollButton").addEventListener("click", function() {
     if (roll === 1) {
         showMessage("Shoot", 1);
         switchPlayer();
-        setInnerContent('turnScore', turn_score);
+        setInnerContent('turnScore', 'Turn Score:' + ` ${parseInt(turn_score)}`);
 
     } else {
         turn_score = turn_score + roll;
             if (playerScoreArray[active_player] + turn_score >= winningScore) {
-                setInnerContent('turnScore', turn_score); 
+                setInnerContent('turnScore', 'Turn Score:' + ` ${parseInt(turn_score)}`); 
                 setClass(`holdButton`, "disabled");
                 setClass(`rollButton`, "disabled");   
                 setClass(`winningArticle`, "winningArticle");
@@ -218,7 +220,7 @@ document.getElementById("rollButton").addEventListener("click", function() {
             } 
             else{
             showMessage("Nice", roll);
-            setInnerContent('turnScore', turn_score); 
+            setInnerContent('turnScore', 'Turn Score:' + ` ${parseInt(turn_score)}`); 
             }
     }
 

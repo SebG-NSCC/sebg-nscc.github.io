@@ -4,14 +4,8 @@ body {
     text-align: center;
 }
 
-h2 {
-    margin-top: 0;
-    margin-bottom: 2%;
-}
-
 #themesTitle {
     margin: 1%;
-    border-bottom: solid black 1px;
 }
 
 #checkPuzzleMsg {
@@ -37,15 +31,6 @@ button {
 
 table {
     margin: 0 auto;
-}
-
-li {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-ul {
-    padding-left: 0;
 }
 
 /* Default Theme */
@@ -83,13 +68,13 @@ td[currentState='2'][class='theme2']{
 
 /* Grey Theme */
 td[currentState='0'][class='theme3']{
-    background-color: rgb(148, 148, 148);
+    background-color: rgb(208, 208, 208);
 }
 td[currentState='1'][class='theme3']{
     background-color: rgb(58, 58, 58);
 }
 td[currentState='2'][class='theme3']{
-    background-color: rgba(205, 205, 205, 0.6);
+    background-color: rgb(133, 133, 133);
 }
 
 
@@ -120,8 +105,8 @@ td[currentState='2'][class='theme4']{
 	@media only screen and (max-width: 480px){
         td {
             outline: solid black;
-            width: 28px;
-            height: 28px;
+            width: 30px;
+            height: 30px;
         }
 
         table{

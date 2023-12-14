@@ -1,0 +1,155 @@
+/* ======================================================= */
+/* ==================== Global Styles ==================== */
+/* ======================================================= */
+html {
+  background: linear-gradient(to right, rgb(17, 72, 72), rgb(17, 98, 94), rgb(17, 72, 72));
+}
+html body {
+  padding: 0 5% 0 5%;
+  background: inherit;
+  font-family: "Inconsolata", monospace;
+}
+html body h2 {
+  text-align: center;
+}
+html body h3 {
+  border-bottom: solid black;
+}
+html body #goalsTable td, html body #goalsTable th {
+  border: 1px solid black;
+}
+
+/* =======================================================*/
+/* ================ Mobile device styles =================*/
+/* =======================================================*/
+@media only screen and (max-width: 480px) {
+  /* +++++++++++++ Nav bar styles +++++++++++++ */
+  a#navicon {
+    outline: solid rgb(221, 78, 39);
+    color: rgb(0, 0, 0);
+    background: linear-gradient(to right, rgb(17, 72, 72), rgb(17, 98, 94) 30% 70%, rgb(17, 72, 72));
+    box-shadow: 0px 6px rgba(28, 29, 28, 0.8);
+  }
+  a#navicon + #permNavLinks {
+    background: linear-gradient(to right, rgb(11, 82, 78), rgb(49, 138, 138), rgb(11, 82, 78));
+    outline: solid rgb(221, 78, 39) 3px;
+  }
+  nav #permNavLinks li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.4em;
+  }
+  nav #permNavLinks li {
+    border: solid black 1.5px;
+  }
+  #backToTopLink img {
+    background-color: rgba(115, 141, 136, 0.8);
+  }
+  /* +++++++++++++ Body Styles +++++++++++++ */
+  body section {
+    padding-bottom: 420px;
+  }
+  body section article {
+    background: radial-gradient(rgb(211, 183, 83), rgb(253, 242, 191) 95%);
+    align-content: center;
+    justify-content: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 10px;
+    box-shadow: 7px 7px rgba(28, 29, 28, 0.8);
+    outline: rgb(79, 57, 32) solid;
+  }
+  body section article p, body section article h3, body section article h4 {
+    margin: 0 2% 1% 2%;
+  }
+  .mobileNavButtons {
+    background: radial-gradient(rgb(211, 183, 83), rgb(253, 242, 191) 95%);
+    box-shadow: 7px 7px rgba(28, 29, 28, 0.8);
+    outline: rgb(79, 57, 32) solid;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  /* +++++++++++++ Arcade Section styles +++++++++++++ */
+  #arcadeSection a, #arcadeSection li {
+    color: black;
+    text-decoration: none;
+    border: solid rgb(207, 168, 40) 2px;
+    padding: 2% 1.5%;
+    background: rgb(255, 230, 172);
+  }
+  #arcadeSection #gamesP {
+    margin: 5% 0;
+  }
+  #arcadeSection h5 {
+    margin: 0 0.2%;
+  }
+}
+/* =======================================================*/
+/* =============== Tablet & Desktop styles ===============*/
+/* =======================================================*/
+@media only screen and (min-width: 481px) {
+  /* +++++++++++++ Body Styles +++++++++++++ */
+  body {
+    font-size: 1.9em;
+  }
+  body article {
+    border-radius: 10px;
+    padding: 0.5% 2% 0.5% 2%;
+    background: radial-gradient(rgb(211, 183, 83), rgb(253, 242, 191) 95%);
+    outline: rgb(79, 57, 32) solid;
+    box-shadow: 6px 6px rgba(28, 29, 28, 0.8);
+  }
+  body article p {
+    background: radial-gradient(rgb(211, 183, 83), rgb(253, 242, 191) 95%);
+    border-radius: 20px;
+    padding: 2%;
+    border-bottom: rgba(0, 0, 0, 0.538) inset;
+    border-top: 2px rgba(162, 162, 162, 0.372) outset;
+    border-right: 2px rgba(162, 162, 162, 0.124) outset;
+    border-left: 2px rgba(162, 162, 162, 0.124) outset;
+  }
+  /* +++++++++++++ Skills section styles +++++++++++++ */
+  #skillsSection ul li:first-of-type {
+    list-style-type: none;
+  }
+  /* +++++++++++++ Nav bar styles +++++++++++++ */
+  nav, nav ul a {
+    display: block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.1em;
+  }
+  #permNav ul:first-of-type {
+    outline: 1px solid rgb(79, 57, 32);
+    background: linear-gradient(rgb(7, 98, 114), rgba(23, 137, 114, 0.75), rgb(7, 98, 114));
+    box-shadow: 0px 2px rgba(28, 29, 28, 0.8);
+  }
+  #permNav ul:first-of-type li:hover {
+    background-color: rgba(80, 181, 161, 0.9);
+    transition-duration: 0.8s;
+  }
+  #permNav ul:first-of-type li {
+    padding: 0 3.75%;
+  }
+  #permNav ul:first-of-type li a {
+    padding: 0 40%;
+  }
+  /* +++++++++++++ Arcade Section styles +++++++++++++ */
+  #arcadeSection a, #arcadeSection li {
+    color: black;
+    text-decoration: none;
+    border: solid rgb(207, 168, 40) 2px;
+    padding: 1.5%;
+    background: rgb(255, 230, 172);
+  }
+  #arcadeSection #gamesP {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  #arcadeSection h5 {
+    text-align: center;
+    text-decoration: underline;
+  }
+}/*# sourceMappingURL=styles.css.map */

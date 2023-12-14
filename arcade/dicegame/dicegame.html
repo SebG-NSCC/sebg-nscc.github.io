@@ -1,52 +1,76 @@
-    
-    <a href="/index.html" id="backToHomeLink"><img src="/images/home/homeicon.png" alt="home icon"></a>
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="dicegameHTML">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice Game</title>
 
-    <link href="dicereset.css" rel="stylesheet">
-    <link rel="stylesheet" href="dicestyles.css">
+    <!--Stylesheets-->
     <link href="dicelayout.css" rel="stylesheet">
-    <link rel="stylesheet" href="dicegame.css">
-    
+    <!-- <link rel="stylesheet" href="dicestyles.css"> -->
+    <!-- <link rel="stylesheet" href="dicegame.css"> -->
+    <link href="/main_reset.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <link href="/layout.css" rel="stylesheet">
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.2/journal/bootstrap.min.css" integrity="sha512-yXyY9RoQOgTNBsVdh7cNl7pvTvwxKaacxfeCl0OTyKK4ty49UDxrAIhqCrsiNxQwLzhQBJw3NKks7bZyghrIZg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.js" defer></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../app.js"></script>
+
+
     <script src="diceApp.js" defer></script>
 
 </head>
 <body>
+    <!-- Persistent Navigation -->
+    <nav id="permNav">
+        <a id="navicon"><img src="/images/home/tf_navicon2.png" alt="navicon"></a>
+            <ul id="permNavLinks">
+                <li><a href="/../#homeSection" id="home_link">Home</a></li>
+                <li><a href="/../#skillsSection" id="skills_link">Skills</a></li>
+                <li><a href="/index.html#arcadeSection" id="games_link">Portfolio</a> </li>
+                <li><a href="/../#goalsSection" id="goals_link">Goals</a></li>
+                <li><a href="/../#resumeSection" id="resume_link">Resume</a></li>
+                <li><a href="/../#contactSection" id="contact_link">Contact</a></li>
+            </ul>
+            <ul id="permBackToTop">
+                <li><a href="/index.html#homeSection" id="backToTopLink"><img src="/images/home/homeicon.png" alt="home icon"></a> </li>
+            </ul>
+    </nav>
+
     <section id="intro">
-        <h1>Dice Game</h1>
-        <article>
-            <p>Roll the die and try to reach the winning score. Rolling 1 will end your turn and award 0 points. Hold ends your turn and adds the turn score to your total score.</p>
-        </article>
+        <h1 class="diceTitle">Dice Game</h1>
+            <p class="diceRulesP">Roll the die and try to reach the winning score. Rolling 1 will end your turn and award 0 points. Hold ends your turn and adds the turn score to your total score.</p>
     </section>
     <section id="scoreboard">
-        <article>
             <h2>Scoreboard</h2>
             <ul id="score">
                 <li id="player_score"></li>
             </ul>
             <h2 class='flashOff' id="currentPlayer">Welcome!</h2>
-            <h2>Turn Score</h2>
-            <p id="turnScore">0</p>
-        </article>
-    <section id="messageDisplay">
-        <article>
-            <p class="disabled" id="rollMessage"></p>
-            <p class="disabled" id="winningMessage"></p>
-            <button class="disabled" id="restartButton">Play Again</button>
-        </article>
-        <article class="disabled" id="winningArticle"></article>
-    </section>
+            <h2 id="turnScore">Turn Score: 0</h2>
+    
     </section>
     <section id="scoreSelection">
         <article id="scoreList">
             <!-- <button id="winScore10">10</button> -->
         </article>
+    </section>
+    <section id="messageDisplay">
+        <p class="disabled" id="rollMessage"></p>
+        <p class="disabled" id="winningMessage"></p>
+        <button class="disabled" id="restartButton">Play Again</button>
+    <article class="disabled" id="winningArticle"></article>
     </section>
     <section id="dice">
         <article>
@@ -76,5 +100,6 @@
             <button class="disabled" id="customPlayers">Custom</button>
         </article>
     </section>
+   
 </body>
 </html>

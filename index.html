@@ -8,16 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seb Grossett - Portfolio</title>
 
+    <!-- import Leaflet css -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <!-- import Leaflet js library -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <!-- import leaflet-rotatedmarker library-->
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-rotatedmarker@0.2.0/leaflet.rotatedMarker.min.js" defer></script>
+
+
     <!-- Stylesheets -->
     <link href="main_reset.css" rel="stylesheet">
-    <link href="main_styles.css" rel="stylesheet">
-    <link href="main_layout.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link href="layout.css" rel="stylesheet">
+
+     <!-- Bootstrap -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.2/journal/bootstrap.min.css" integrity="sha512-yXyY9RoQOgTNBsVdh7cNl7pvTvwxKaacxfeCl0OTyKK4ty49UDxrAIhqCrsiNxQwLzhQBJw3NKks7bZyghrIZg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.js" defer></script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
 
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+
+    <!-- Bus Script -->
+    <script src="main.js" defer></script>
+        
 </head>
 <body>
     <!-- Persistent Navigation -->
@@ -26,10 +45,11 @@
             <ul id="permNavLinks">
                 <li><a href="#homeSection" id="home_link">Home</a></li>
                 <li><a href="#skillsSection" id="skills_link">Skills</a></li>
+                <li><a href="#arcadeSection" id="games_link">Portfolio</a> </li>
                 <li><a href="#goalsSection" id="goals_link">Goals</a></li>
                 <li><a href="#resumeSection" id="resume_link">Resume</a></li>
                 <li><a href="#contactSection" id="contact_link">Contact</a></li>
-                <li><a href="/arcade/games.html" id="games_link">Arcade</a> </li>
+                
             </ul>
             <ul id="permBackToTop">
                 <li><a href="#homeSection" id="backToTopLink"><img src="/images/home/homeicon.png" alt="home icon"></a> </li>
@@ -54,13 +74,33 @@
             <h3>Skills</h3>
                 <ul id="skillsList">
                     <li><img src="/images/home/coding_stock.jpg" alt="a computer monitor showing several lines of code"></li>
-                    <li><u>HTML</u>: Able to layout and edit webpages using HTML 5 standards. Foundational understanding of appropriate syntax and best practices. HTML essential training certificate on LinkedIn.</li>
-                    <li><u>CSS</u>: Solid understanding of CSS selectors and attributes. Able to layout and style webpages using techniques including flexbox and grid-based layouts. CSS essential training certificate on LinkedIn.</li>
-                    <li><u>JavaScript</u>: Foundational understanding of "for" and "while" loops, functions, 2 dimensional arrays, data types, objects, and debugging. Able to create functioning console-based applications including games, and calculators. </li>
+                    <li><u>HTML</u>: Able to properly layout and edit webpages in accordance with HTML 5 standards. Good understanding of appropriate syntax and best practices. HTML essential training certificate on LinkedIn.</li>
+                    <li><u>SASS/SCSS/CSS/Bootstrap/Tailwind</u>: Solid understanding of CSS selectors and attributes. Able to layout and style webpages using techniques including flexbox and grid-based layouts. CSS essential training certificate on LinkedIn.</li>
+                    <li><u>JavaScript/jQuery</u>: Good understanding of loops and iteration, functions, DOM, 2 dimensional arrays, data types, objects, and debugging. Able to create functioning console or web-based applications including games, calculators, and API integrations. </li>
+                    <li><u>SQL</u>: Foundational understanding of SQL concepts including data definition language, data manipulation language, and normalization. Able to create and manage databases using appropriate foreign and primary key constraints. Familiar with stored procedures, views, indexes, and aggregate functions. </li>
                 </ul>
         </article>
         <p class="mobileNavContainer">
             <a href="#homeSection" class="mobileNavButtons">Prev</a>
+            <a href="#arcadeSection" class="mobileNavButtons">Next</a>
+        </p>
+    </section>
+    <section id="arcadeSection">
+        <article>
+            <h3>Arcade</h3>
+            <h5>Select a game to play!</h5>
+            <p id="gamesP">
+                <a href="/arcade/dicegame/dicegame.html" id="dicegameButton" class="gameSelectButton">Dice Game</a>
+                <a href="/arcade/threeinarow/threeinarow.html" id="threeinarowButton" class="gameSelectButton">Three in a Row</a>
+                <a href="/arcade/battleship/battleship.html" id="battleshipButton" class="gameSelectButton">BattleShip</a>
+            </p>
+
+            <h3>Halifax Transit API Integration</h3>
+            <p>The bus information for Halifax Transit routes 1-10 is retrieved every 5 seconds and mapped accordingly.</p>
+            <div id="theMap" class="flex justify-content-center"></div>
+        </article>
+        <p class="mobileNavContainer">
+            <a href="#skillsSection" class="mobileNavButtons">Prev</a>
             <a href="#goalsSection" class="mobileNavButtons">Next</a>
         </p>
     </section>
@@ -111,7 +151,7 @@
             </table>
         </article>
         <p class="mobileNavContainer">
-            <a href="#skillsSection" class="mobileNavButtons">Prev</a>
+            <a href="#arcadeSection" class="mobileNavButtons">Prev</a>
             <a href="#resumeSection" class="mobileNavButtons">Next</a>
         </p>
     </section>
@@ -119,47 +159,57 @@
         <article>
             <h3>Resume</h3>
                 <h4><u>Employment History</u></h4>
-                    <h5>Popeyes Supplements | 2022-2023</h5>
-                        <ol>
-                            <li><u>Sales Associate</u></li>
-                                <li>Consulted customers to determine health and wellness goals, potential nutritional deficiencies, and dietary preferences to suggest appropriate supplements.</li>
-                                <li>Received shipments from suppliers and performed regular inventory counts to track product movement and shrinkage.</li>
-                                <li>Operated a retail POS system and an online portal in order to fulfill and dispatch orders.</li>
-                                <li>Provided a welcoming and professional environment for all potential customers.</li>
-                        </ol>
+                <div id="resumeContainerDiv">
+                <div id="resumeListDiv" class="col-4">
+                    <h5 class="resumeExperienceSelector" id="resumeDescPopeyes">Popeyes Supplements | 2022-2023</h5>
+                    <h5 class="resumeExperienceSelector" id="resumeDescManulife">Manulife | 2022</h5>
+                    <h5 class="resumeExperienceSelector" id="resumeDescSportchek">SportChek Canada | 2019-2020</h5>
+                    <h5 class="resumeExperienceSelector" id="resumeDescTitans">Titans & StFX University | 2013-2019</h5>
+                    <h5 class="resumeExperienceSelector" id="resumeDescEducation">Education | 2017-2021 & 2023-2024</h5>
                     
-                    <h5>Manulife | 2022</h5>
-                        <ol>
-                            <li><u>AMCS Case Manager</u></li>
-                                <li>Worked closely with clients and plan members to determine support periods and disability payment eligibility.</li>
-                                <li>Analyzed and assessed group disability contracts, adhered to service level agreements, and handled sensitive medical information.</li>
-                                <li>Designed appropriate return to work strategies for plan members based on their job requirements and current level of function.</li>
-                                <li>Provided tools and disability support services to plan members and regularly followed up throughout their recovery process.</li>
-                        </ol>
-                    
-                    <h5>SportChek Canada | 2019-2020</h5>
-                        <ol>
-                            <li><u>Merchandiser / Sales Associate</u></li>
-                                <li>Handled incoming shipments and merchandised new products onto the sales floor.</li>
-                                <li>Adjusted signage and pricing in accordance with sales and promotional events.</li>
-                                <li>Maintained store standards and provided excellent customer service.</li>
-                                <li>Assisted customers with inquiries and provided personalized recommendations.</li>
-                        </ol>
-                    
-                    <h5>Titans Gymnastics & StFX University | 2013-2019</h5>
-                        <ol>
-                            <li><u>Gymnastics Instructor</u></li>
-                                <li>Provided a positive and safe environment for students by ensuring all apparatus was used and set up/stored properly.</li>
-                                <li>Planned and scheduled curriculum based on a predetermined set of skills and tailored lesson plans to fit each student's needs and goals.</li>
-                                <li>Tracked and monitored students' progress throughout the term and conducted year-end progress reports.</li>
-                        </ol>
 
-                    <h5>Education | 2017-2021 & 2023-2024</h5>
-                        <ol>
-                            <li><u>StFX University 21' & NSCC 24'</u></li>
-                                <li>Graduated with honors from StFX with a major in Kinesiology and a minor in Sport Management.</li>
-                                <li>Started the Full Stack Dvelopment program at NSCC in 2023, with an expected graduation in 2024.</li>
-                        </ol>
+                </div>
+                <aside class="col-8" id="resumeDescriptions">
+                    <ol class="resumeDescEducation">
+                        <li><u>StFX University 21' & NSCC 24'</u></li>
+                            <li>Graduated with honors from StFX with a major in Kinesiology and a minor in Sport Management.</li>
+                            <li>Started the Full Stack Dvelopment program at NSCC in 2023, with an expected graduation in 2024.</li>
+                    </ol>
+
+                    <ol class="resumeDescTitans">
+                        <li><u>Gymnastics Instructor</u></li>
+                            <li>Provided a positive and safe environment for students by ensuring all apparatus was used and set up/stored properly.</li>
+                            <li>Planned and scheduled curriculum based on a predetermined set of skills and tailored lesson plans to fit each student's needs and goals.</li>
+                            <li>Tracked and monitored students' progress throughout the term and conducted year-end progress reports.</li>
+                    </ol>
+
+                    <ol class="resumeDescSportchek">
+                        <li><u>Merchandiser / Sales Associate</u></li>
+                            <li>Handled incoming shipments and merchandised new products onto the sales floor.</li>
+                            <li>Adjusted signage and pricing in accordance with sales and promotional events.</li>
+                            <li>Maintained store standards and provided excellent customer service.</li>
+                            <li>Assisted customers with inquiries and provided personalized recommendations.</li>
+                    </ol>
+
+                    <ol class="resumeDescManulife">
+                        <li><u>AMCS Case Manager</u></li>
+                            <li>Worked closely with clients and plan members to determine support periods and disability payment eligibility.</li>
+                            <li>Analyzed and assessed group disability contracts, adhered to service level agreements, and handled sensitive medical information.</li>
+                            <li>Designed appropriate return to work strategies for plan members based on their job requirements and current level of function.</li>
+                            <li>Provided tools and disability support services to plan members and regularly followed up throughout their recovery process.</li>
+                    </ol>
+
+                    <ol class="resumeDescPopeyes">
+                        <li><u>Sales Associate</u></li>
+                            <li>Consulted customers to determine health and wellness goals, potential nutritional deficiencies, and dietary preferences to suggest appropriate supplements.</li>
+                            <li>Received shipments from suppliers and performed regular inventory counts to track product movement and shrinkage.</li>
+                            <li>Operated a retail POS system and an online portal in order to fulfill and dispatch orders.</li>
+                            <li>Provided a welcoming and professional environment for all potential customers.</li>
+                    </ol>
+
+                </aside>
+            </div>
+                
         </article>
         <p class="mobileNavContainer">
             <a href="#goalsSection" class="mobileNavButtons">Prev</a>
@@ -170,21 +220,11 @@
         <article>
             <h3>Contact</h3>
                
-                <h4>Need to get in touch?</h4>
+                <h4>Looking to connect?</h4>
                 <p>Personal email:&nbsp;<a id="emailButton" href="mailto:sebgr97@gmail.com">sebgr97@gmail.com</a></p>
-            
-                <h4>Looking to network?</h4>
+           
                 <a href="https://www.linkedin.com/in/sebastian-grossett-086579138/" target="new"><img src="/images/home/LIsmall_logo.png" alt="LinkedIn logo"></a>
-                <p>LinkedIn Profile</p>
-                
-                <h4>Social Media Links</h4>
-                <a href="https://www.facebook.com/sebastian.grossett/" target="new"><img src="/images/home/facebookicon.jpg" alt="Facebook Icon"></a>
-                <p>Facebook</p>
-                <a href="https://www.instagram.com/sebgrossett/" target="new"><img src="/images/home/instaicon.jpg" alt="Instagram Icon"></a>
-                <p>Instagram</p>         
-                
-                <h4>Emergency Contact</h4>
-                <p>902-802-0082</p>
+                      
               
         </article>
         <p class="mobileNavContainer">
