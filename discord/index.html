@@ -7,9 +7,12 @@
 
     <script src="/discord/testBot/index.js" defer></script>
     <script>
-    mainWindow = new BrowserWindow({webPreferences: {
-        nodeIntegration: true
-    }});
+    let window = new BrowserWindow({
+    webPreferences: {
+        nodeIntegration: true,
+        contextIsolation: false
+    }
+});
     </script>
 </head>
 <body>
