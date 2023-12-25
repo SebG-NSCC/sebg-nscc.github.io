@@ -1,6 +1,6 @@
 "use strict";
 
-const window = new BrowserWindow({
+window = new BrowserWindow({
   webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
