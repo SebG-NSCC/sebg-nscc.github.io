@@ -1,9 +1,5 @@
 "use strict";
 
-const mainWindow = new BrowserWindow({webPreferences: {
-  nodeIntegration: true
-}});
-
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const discord_js_1 = require("discord.js");

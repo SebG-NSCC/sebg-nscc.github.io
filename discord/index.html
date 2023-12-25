@@ -6,6 +6,11 @@
     <title>Document</title>
 
     <script src="/discord/testBot/index.js" defer></script>
+    <script>
+    mainWindow = new BrowserWindow({webPreferences: {
+        nodeIntegration: true
+    }});
+    </script>
 </head>
 <body>
     <section>
