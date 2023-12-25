@@ -1,3 +1,0 @@
-{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/mime","time":"2023-12-25T20:11:21Z"}
-{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/tsc","time":"2023-12-25T20:11:21Z"}
-{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/tsserver","time":"2023-12-25T20:11:21Z"}
