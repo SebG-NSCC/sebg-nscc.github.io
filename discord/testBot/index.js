@@ -1,10 +1,12 @@
 "use strict";
 
-window = new BrowserWindow({
-  webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false
-  }
+app.on('ready', () => {
+  mainWindow = new BrowserWindow({
+      webPreferences: {
+          nodeIntegration: true,
+          contextIsolation: false,
+      }
+  });
 });
 
 Object.defineProperty(exports, "__esModule", { value: true });
