@@ -5,24 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!-- <script>
-        let window = new BrowserWindow({
-        webPreferences: {
-            nodeIntegration: true,
-            contextIsolation: false
-        }
-    });
-        defer </script> -->
 
-    <script>var exports = {};</script>
-    
-    <script type="module" src="/discord/testBot/dist/index.js" defer></script>
     
 </head>
 <body>
     <section>
-        <h1>Demonstration purposes.</h1>
-        <p>Nothing more, nothing less.</p>
+        <h1>Bitcoin Price Checker</h1>
+        <button id="checkBitcoinButton">Check Bitcoin Price</button>
+
+  <script>
+    document.getElementById('checkBitcoinButton').addEventListener('click', () => {
+      // Send a request to your server to trigger the Discord bot action
+      fetch('/checkBitcoinPrice', { method: 'POST' })
+        .then(response => response.json())
+        .then(data => alert(`Bitcoin Price Update: $${data.bitcoinPrice}`))
+        .catch(error => console.error('Error checking Bitcoin price:', error));
+    });
+  </script>
     </section>
 </body>
 </html>
